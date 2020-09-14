@@ -1,0 +1,31 @@
+:host {
+  display: inline-block;
+}
+
+.tile-image {
+
+  &__wrapper {
+    overflow: hidden;
+    height: 200px;
+    width: 100%;
+    border-radius: 3px; // make css var
+    box-shadow: 2px 2px 4px 0px #cfd0d1;
+
+    &:hover {
+      .tile-image__image {
+        transform: scale(1.5);
+        opacity: 0.75;
+      }
+    }
+  }
+
+  &__image {
+    height: inherit;
+    width: inherit;
+    object-fit: cover;
+    object-position: 50% 50%;
+    transition: 500ms ease;
+    cursor: pointer;
+    display: middle;
+  }
+}
